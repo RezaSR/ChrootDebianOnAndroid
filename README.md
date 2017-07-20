@@ -19,7 +19,7 @@ At least one partition in the SD card is needed for linux. Format the partition 
 Hint: use `lsblk` command to identify the partition to be formated, for example `/dev/mmcblk0p1`:
   - ext3: `sudo mkfs.ext3 -L "linux" /dev/mmcblk0p1`
   - ext4: `sudo mkfs.ext4 -O ^metadata_csum -L "linux" /dev/mmcblk0p1`
-    - Note: Some android devices may not recognize ext4 partition with "metadata_csum" feature, so disabled it when formatting.
+    - Note: Some android devices may not recognize ext4 partition with "metadata_csum" feature, so disable it when formatting.
 
 ### Copy files to SD card partition
 Mount the formatted SD card partition:
