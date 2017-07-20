@@ -36,13 +36,13 @@ Or connect the device to the PC with a USB cable and get access to it's shell us
 
 Hint: Identify the linux partition on the android device by viewing the partitions file: `cat /proc/partitions`. For example `/dev/block/mmcblk1p1`
 
-Copy the `linux.sh` file to the android device in the desired location: `/data/linux.sh` and make it executable:
-
-`chmod 770 /data/linux.sh`
-
 Set the linux partition's path in the `linux.sh` file as the `LINUX_PARTITION` variable.
 Default filesystem of SD card's partition is set to ext4.
 If the SD card's partition is formatted using ext3 filesystem, set the `PARTITION_FS` variable to ext3 in the `linux.sh` file.
+
+Copy the `linux.sh` file to the android device in the desired location: `/data/linux.sh` (root needed) and make it executable:
+
+`chmod 770 /data/linux.sh`
 
 ### Initial setup
 Execute the following commands on the android's shell in the first run only:
