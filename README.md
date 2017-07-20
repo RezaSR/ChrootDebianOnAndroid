@@ -8,8 +8,8 @@
 ### Debootstrap debian
 First debootstrap the debian linux on the PC to be install on the android device:
 
-`sudo debootstrap --arch=i386 --variant=minbase --foreign stable ~/deb_i386 http://ftp.debian.org/debian/`
-  - The above command debootstrap debian in ~/deb_i386 directory.
+`sudo debootstrap --arch=i386 --variant=minbase --foreign stable ~/debian_bootstrap http://ftp.debian.org/debian/`
+  - The above command debootstrap debian in ~/debian_bootstrap directory.
   - Set `--arch` to match the android's architecture to fetch proper linux for it.
   - Specify the desired debian release to fetch: stable, testing, stretch, jessie, etc.
 
@@ -28,7 +28,7 @@ Mount the formatted SD card partition:
 
 Copy debootstraped files to mounted partition:
 
-`sudo cp -pfr ~/deb_i386/* /mnt/sdcard`
+`sudo cp -pfr ~/debian_bootstrap/* /mnt/sdcard`
 
 ### Chroot on android
 Insert the SD card in the android device and get access to the android's shell via android apps like ConnectBot, JuiceSSH, etc.
