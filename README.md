@@ -28,7 +28,7 @@ Mount the formatted SD card partition:
 
 Copy debootstraped files to mounted partition:
 
-`sudo cp -pfr ~/debian_bootstrap/* /mnt/sdcard`
+`sudo cp -pfr ~/debian_bootstrap/* /mnt/sdcard/`
 
 ### Chroot on android
 Insert the SD card in the android device and get access to the android's shell via android apps like ConnectBot, JuiceSSH, etc.
@@ -65,7 +65,7 @@ Add password for the root user:
 
 Add desired DNS server to the `resolve.conf` file in order to enable domain name lookups:
 
-`echo 208.67.222.222 > /etc/resolv.conf`
+`echo nameserver 208.67.222.222 > /etc/resolv.conf`
 
 Create goups that are recognized by the andoird OS:
 
