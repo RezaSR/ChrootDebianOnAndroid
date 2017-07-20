@@ -96,11 +96,11 @@ Also the primary group of `_apt` user can be set to `aid_inet` by `-g` switch:
 
 Prepare sources.list file:
 
-`echo deb http://security.debian.org/ stretch/updates main contrib non-free > /etc/apt/sources.list`
+`echo deb http://security.debian.org/ stable/updates main contrib non-free > /etc/apt/sources.list`
 
-`echo deb http://ftp.debian.org/debian/ stretch-updates main contrib non-free >> /etc/apt/sources.list`
+`echo deb http://ftp.debian.org/debian/ stable-updates main contrib non-free >> /etc/apt/sources.list`
 
-`echo deb http://ftp.debian.org/debian/ stretch main contrib non-free >> /etc/apt/sources.list`
+`echo deb http://ftp.debian.org/debian/ stable main contrib non-free >> /etc/apt/sources.list`
 
 Update apt repository:
 
