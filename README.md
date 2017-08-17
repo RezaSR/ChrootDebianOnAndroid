@@ -130,7 +130,7 @@ To unmount and kill chroot, after exiting chroot, execute: `/data/linux.sh -k`
 To get help pass `-h` or `--help` switch to the `linux.sh` script: `/data/linux.sh -h`
 
 ### Running GUI apps and desktop environment
-In order to start a desktop environment and run GUI apps, install a X server app on the android and run it.
+In order to start a desktop environment and run GUI apps, install an X server app on the android and run it.
 One example is "XServer XSDL".
 
 To forward the chroot display to the "XServer XSDL", execute the following command:
