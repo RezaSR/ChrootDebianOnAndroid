@@ -39,7 +39,7 @@ if [ "$1" == "-k" ]; then
         echo -n "    PID: $PID: "
         kill "$PID"
         echo "done"
-        PID=$(lsof | grep /data/debian | /bin/head -n 1 | /bin/awk '{print $2}') # Get linux PID
+        PID=$(lsof | grep "$LINUX_ROOT" | /bin/head -n 1 | /bin/awk '{print $2}') # Get linux PID
     done
 
     ### Unmount bind mounts
@@ -65,13 +65,13 @@ if [ "$1" == "-k" ]; then
 
     ### Unmount other mounts
     echo "Unmounting other mounts: "
-    MP=$(mount | grep /data/debian/ | /bin/awk '{print $2}') # Get other mount points
+    MP=$(mount | grep "$LINUX_ROOT" | /bin/awk '{print $2}') # Get other mount points
     while [ "$MP" ]
     do
         echo -n "    $MP: "
         umount "$MP"
         echo "done"
-        MP=$(mount | grep /data/debian/ | /bin/awk '{print $2}') # Get other mount points
+        MP=$(mount | grep "$LINUX_ROOT" | /bin/awk '{print $2}') # Get other mount points
     done
 
     ### Unmount linux partition
